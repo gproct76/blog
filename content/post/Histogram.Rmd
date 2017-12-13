@@ -1,3 +1,4 @@
+#Histogram
 ---
 title: "Histogram"
 output: html_document
