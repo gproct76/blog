@@ -1,0 +1,25 @@
+---
+title: "Histogram"
+output: html_document
+---Histograms
+
+Histograms
+
+In this blog I will be demonstrating the art behind creating a histogram in RStudo. The first step is to bring i the packages we will need using the library command:
+```{r}
+library(sqldf)
+library(Lahman)
+library(ggplot2)
+```
+Step two is extracting the data. In this example we are looking at the body weight distribution of baseball players. We can get this information by using an sqldf query search. Step three is visualizing the data. We use the ggplot() command to do this and then tell the program what data we want displayed and the way we want it displayed as shown below. We have the option of changing the color and fill and number of bins to customize our graph. Also, I added a title to the histogram by using the ggtitle command.
+```{r}
+query<-"SELECT weight
+FROM Master"
+result<-sqldf(query)
+```
+visualizing data------------
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="green",fill="white",bins="50")+
+  ggtitle("Body Weigh Distribution for Baseball Players")
+```
