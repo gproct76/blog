@@ -1,3 +1,4 @@
+#Scatter Plots
 ---
 title: "Scatter Plots"
 output: html_document
